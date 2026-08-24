@@ -1,0 +1,21 @@
+processing_level: 'session'
+queue: 'slurm'
+
+# input dataset's name(s)
+input_datasets:
+
+  fmriprep_anat:
+    origin_url: 'ria+file:///cbica/projects/pennlinc_rbc/datasets/LINC_NKI/derivatives/fmriprep_anat-24-1-1-babs/output_ria#~data'
+    path_in_babs: 'inputs/data/fmriprep_anat'
+    unzipped_path_containing_subject_dirs: 'fmriprep_anat'
+    is_zipped: true
+
+
+# container ds:
+container:
+  name: 'freesurferpost-0-2-1'
+  path_in: '/cbica/projects/pennlinc_rbc/apptainer-datasets/freesurferpost-0-2-1-ds'
+
+container_images:
+
+  - 'containers/.datalad/environments/freesurferpost-0-2-1/image'
